@@ -5,6 +5,7 @@ const fs = require("fs");
 const { Circle, Triangle, Square } = require("./lib/shapes.js");
 const SVG = require("./lib/svg.js");
 
+
 // array of questions for user input
 const questions = [
     {
@@ -43,10 +44,22 @@ function askQuestions() {
         if (answers.shape === "triangle") {
             shape = new Triangle()
         }
-        shape.setColor(answers.color)
         const svg = new SVG()
+       svg.setText(answers.text)   //not sure how i feel about these lines...
+        //const svg = new SVG()
+        svg.rendershape.setColor(answers.color)
+        //const svg = new SVG()
+        textColor.setColor(answers.textColor)
+        logo.addShape(shape)
+        console.log(svg.rendershape.getColor())
     })
 }
 askQuestions()
-call 
+
+
+
+
+
+
+
 
