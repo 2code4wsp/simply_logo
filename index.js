@@ -45,13 +45,13 @@ function askQuestions() {
             shape = new Triangle()
         }
         const svg = new SVG()
-       svg.setText(answers.text)   //not sure how i feel about these lines...
+        svg.setText(answers.text)   //not sure how i feel about these lines...
         //const svg = new SVG()
         svg.rendershape.setColor(answers.color)
         //const svg = new SVG()
-        textColor.setColor(answers.textColor)
+        //textColor.setColor(answers.textColor)
         logo.addShape(shape)
-        console.log(svg.rendershape.getColor())
+        //console.log(svg.rendershape.getColor())
     })
 }
 askQuestions()
