@@ -1,9 +1,10 @@
 //include packages needed for this application
 
 const inquirer = require("inquirer");
-const fs = require("fs");
+//const fs = require("fs");
 const { Circle, Triangle, Square } = require("./lib/shapes.js");
 const SVG = require("./lib/svg.js");
+const {writeFile} = require("fs/promises")
 
 
 // array of questions for user input
@@ -31,6 +32,7 @@ const questions = [
     },
 ]
 
+//create a function to 
 function askQuestions() {
     inquirer.prompt(questions).then((answers) => {
         console.log(answers);
@@ -44,17 +46,17 @@ function askQuestions() {
         if (answers.shape === "triangle") {
             shape = new Triangle()
         }
-        const svg = new SVG()
-        svg.setText(answers.text)   //not sure how i feel about these lines...
-        //const svg = new SVG()
-        svg.rendershape.setColor(answers.color)
-        //const svg = new SVG()
-        //textColor.setColor(answers.textColor)
-        logo.addShape(shape)
-        //console.log(svg.rendershape.getColor())
-    })
+        shape.setColor(answers.color);
+        const svg = new SVG();
+        svg.setText(answers.text, answers.textColor);
+        svg.setShape(shape);
+
+        console.log(svg);
+        console.log(svg.render());
+        return writeFile("logo.svg", svg.render())
+    });
 }
-askQuestions()
+askQuestions();
 
 
 
