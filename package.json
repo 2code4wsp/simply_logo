@@ -4,7 +4,7 @@
   "description": "",
     "scripts": {
     "test": "jest"
-  }
+  },
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^24.9.0"
