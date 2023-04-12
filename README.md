@@ -7,7 +7,7 @@ As a developer I want to make a simple application to create a logo when a graph
 When using this application you will need node.js version 16x or above as well as npm installed in your terminal in order to answer the prompts and generate the logo. Keep in mind that after you install npm you should run npm start. Then run node index.js in the terminal to answer the prompts and generate the logo.
 
 ## Usage
-photo of project ------->
+photo of project ------->![Alt text](assets/2023-04-10%20(5).png) ![Alt text](assets/2023-04-10%20(6).png)
 video of project ------->
 
 ## Credits
